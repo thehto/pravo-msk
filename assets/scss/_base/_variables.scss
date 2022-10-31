@@ -1,0 +1,342 @@
+$text-color-primary: #fff;
+$text-color-secondary: #eee;
+
+$text-size: 16px;
+$font-default: "ProximaNova";
+$font-primary: "ProximaNova";
+$gradient-primary: linear-gradient(45deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+$gradient-0: linear-gradient(0deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+$gradient-90: linear-gradient(90deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+
+
+
+
+
+
+
+$font-white: #fff;
+$font-gray: #cfe0ff; //#919cb0;
+$bg-dark-blue: #131829;
+
+$color-red: #d93d3d;
+$color-green: #4ead58;
+
+:root {
+    // dark theme
+    --text-size: 15px;
+    --text-size-info: 16px;
+    --text-small-size: 13px;
+    --h1-size: 30px;
+    --h2-size: 26px;
+    --h3-size: 24px;
+    --h4-size: 20px;
+    --h5-size: 16px;
+    --text-primary: 255, 255, 255;
+    --text-secondary: 224, 230, 240;
+    --line-color: 231, 231, 233;
+    --bg-color: 22, 25, 36;
+    --bg-color2: 34, 38, 54;
+    --bg-overlay: rgb(39, 43, 56);
+    --text-color-btn: 255, 255, 255;
+
+    --font-default: "ProximaNova";
+    --font-primary: "ProximaNova";
+
+    // light theme  
+    &.theme-light {
+        //--text-primary: rgb(22, 25, 36);
+        --text-primary: 45, 55, 62;
+        --text-secondary: 42, 46, 60;
+        --line-color: 45, 55, 72;
+        --bg-color: 245, 246, 250;
+        --bg-overlay: #e6e7eb;
+    }
+
+    &.theme-blue {
+        --bg-primary: rgb(15, 139, 253)
+    }
+
+    &.theme-green {
+        --bg-primary: rgb(2, 207, 121);
+        --text-color-btn: 45, 55, 72;
+    }
+
+    &.theme-pink {
+        --bg-primary: rgb(236, 77, 188)
+    }
+
+    &.theme-orange {
+        --bg-primary: rgb(255, 110, 0)
+    }
+
+    &.theme-violet {
+        --bg-primary: rgb(135, 62, 254)
+    }
+
+    &.theme-red {
+        //--bg-primary: rgb(255, 50, 50)
+        --bg-primary: #E52020;
+    }
+
+    &.theme-lightblue {
+        --bg-primary: rgb(0, 198, 238);
+        --text-color-btn: 45, 55, 72;
+    }
+
+    &.theme-yellow {
+        --bg-primary: rgb(255, 180, 0);
+        --text-color-btn: 45, 55, 72;
+    }
+
+    &.theme-yellow.theme-light {
+        //--text-color-btn: rgb(45, 55, 72);
+    }
+
+    &.theme-scale {
+        --text-size: 17px;
+        --text-size-info: 18px;
+        --text-small-size: 15px;
+        --h1-size: 38px;
+        --h2-size: 32px;
+        --h3-size: 30px;
+        --h4-size: 26px;
+        --h5-size: 20px;
+    }
+}
+
+$text-primary: rgba(var(--text-primary), 1);
+$text-secondary: rgba(var(--text-secondary), 1);
+$text-small-size: var(--text-small-size);
+//$text-size: var(--text-size);
+$text-size-info: var(--text-size-info);
+$h1-size: var(--h1-size);
+$h2-size: var(--h2-size);
+$h3-size: var(--h3-size);
+$h4-size: var(--h4-size);
+$h5-size: var(--h5-size);
+$line-color: rgba(var(--line-color), 1);
+$bg-color: rgba(var(--bg-color), 0.98);
+$bg-color2: rgba(var(--bg-color2), 0.98);
+$bg-primary: var(--bg-primary);
+$bg-primary2: hsl(0, 79%, 45%);
+$bg-overlay: var(--bg-overlay);
+$text-color-btn: rgba(var(--text-color-btn), 1);
+
+$scroll-width: 5px;
+$border-radius-small: 5px;
+$border-radius-middle: 6px;
+$font-default: var(--font-default);
+$font-primary: var(--font-primary);
+
+$fa-font-path: "../fonts/FontAwesome";
+
+
+// Grid system
+/*$screen-xs: 360px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+$container-xs: 0px;
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;*/
+/*
+// Columns
+$container-max-widths: (
+    xs: $container-xs,
+    sm: $container-sm,
+    md: $container-md,
+    lg: $container-lg,
+    xl: $container-xl,
+    xxl: $container-xxl
+) !default;
+
+$grid-breakpoints: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+  xxl: $screen-xxl
+) !default;*/
+
+$container-max-widths: ( //xs: 360px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px);
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px);
+
+
+// Grid columns
+$gutter: 15px;
+//$gutters: 12;
+//$grid-columns: 15 !default;
+//$grid-gutter-width: $gutter*2 !default;
+
+$h1-font-sizes: (null : 1.875rem, // 30px
+    768px : 2.5rem, // 40px
+    1024px: 3.75rem // 60px
+);
+
+$h2-font-sizes: (null : 1.5rem, // 24px
+    768px : 2rem, // 32px
+    1024px: 2rem // 32px
+);
+
+$h3-font-sizes: (null : 1.375rem, // 22px
+    768px : 1.625rem, // 26px
+    1024px: 2rem // 32px
+);
+
+$h4-font-sizes: (null : 1.25rem, // 20px
+    768px : 1.25rem, // 20px
+    1024px: 1.625rem // 26px
+);
+
+$h5-font-sizes: (null : 1rem, // 17px
+    768px : 1rem, // 17px
+    1024px: 1.25rem // 20px
+);
+
+$p-font-sizes: (null : 0.875rem, // 14px
+    768px : 0.938rem, // 15px
+    1024px: 1rem // 17px
+);
+
+$btn-font-sizes: (null : 0.875rem, // 14px
+);
+
+$span-font-sizes: (null : 0.813rem, // 13px
+);
+
+$caption-font-sizes: (null : 0.71rem, // 12px
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*:root {
+    // light theme
+    --text-primary: rgb(22, 22, 23);
+    --text-secondary: rgb(110, 109, 122);
+    --line-color: rgb(231, 231, 233);
+    --background-color: rgb(243, 243, 244);
+    --html-background-color: rgb(255, 255, 255);
+
+    // dark theme
+    &.dark-mode {
+        --text-primary: rgb(250, 250, 250);
+        --text-secondary: rgb(188, 187, 201);
+        --line-color: rgb(45, 55, 72);
+        --background-color: rgb(45, 55, 72);
+        --html-background-color: rgb(26, 32, 44);
+    }
+}
+
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$line-color: var(--line-color);
+$background-color: var(--background-color);
+$html-background-color: var(--html-background-color);
+
+
+$container-max-widths: (
+	sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+
+*/
+
+/*
+
+            { name: "blue", color: "rgb(15, 139, 253)" },
+            { name: "green", color: "rgb(2, 207, 121)" },
+            { name: "pink", color: "rgb(236, 77, 188)" },
+            { name: "orange", color: "rgb(253, 146, 20)" },
+            { name: "violet", color: "rgb(135, 62, 254)" },
+            { name: "red", color: "rgb(255, 50, 50)" },
+            { name: "lightblue", color: "rgb(0, 198, 238)" },
+            { name: "yellow", color: "rgb(255, 180, 0)" },
+			*/
+
+
+
+
+$text-color-primary: #0d1117;
+$text-color-secondary: rgb(108, 110, 125);
+
+$text-color-primary-i: #fff;
+$text-color-secondary-i: #eee;
+
+$text-size: 17px;
+$text-size-big: 19px;
+$text-size-small: 15px;
+$font-default: "SF UI Display";
+$font-primary: "ProximaNova";
+$gradient-primary: linear-gradient(45deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+$gradient-0: linear-gradient(0deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+$gradient-90: linear-gradient(90deg,
+    #fa7e1e,
+    #cb1576 30%,
+    #7b1bc0 70%,
+    #3957d5 100%);
+
+$h1-size: 60px;
+$h2-size: 42px;
+$h3-size: 36px;
+$h4-size: var(--h4-size);
+$h5-size: var(--h5-size);
+
+$screen-xs: 360px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;

@@ -1,0 +1,390 @@
+@import "_base/variables";
+@import "_base/reset";
+@import "_base/bootstrap";
+@import "_base/anims";
+//@import "_base/helper";
+@import "_fonts/fonts";
+@import "_fonts/tipography";
+
+@import "ui/notify";
+
+// fontawesome
+/*@import "_libs/fontawesome/fontawesome.scss";
+@import "_libs/fontawesome/solid.scss";
+@import "_libs/fontawesome/regular.scss";
+@import "_libs/fontawesome/brands.scss";
+@import "_libs/fontawesome/thin.scss";
+@import "_libs/fontawesome/light.scss";*/
+
+
+//.container {
+    .row-flex {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+    }
+//}*/
+
+* {
+    //user-select: none;
+}
+
+html {
+    position: relative;
+    //background-color: #000;
+    background-color: #0d1117;
+    background-color: #fff;
+}
+
+main {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-default, sans-serif;
+    font-size: $text-size;
+    font-weight: 300;
+    color: $text-secondary;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+input {
+    font-family: $font-default, sans-serif;
+}
+
+.icon {
+    svg {
+        width: 100%;
+        height: 100%;
+        max-width: 16px;
+        max-height: 16px;
+    }
+    &.icon-close {
+        width: 38px;
+        height: 38px;
+        //@debug: $color-red;
+        //background-color: $color-red;
+        background: rgba(var(--line-color), 1);
+        //background-color: rgba(var(--bg-box), 1);
+        background-image: linear-gradient(45deg, rgba(var(--bg-box), 0) 0%, rgba(var(--bg-box), 1));
+        //border-radius: 0px 0px 0px 50px;
+        border-radius: $border-radius-middle;
+        //margin-right: 20px;
+        svg {
+            //padding-left: 8px;
+            //padding-bottom: 4px;
+            max-width: 24px;
+            max-height: 24px;
+            position: absolute;
+            top: 6px;
+            right: 7px;
+            fill: $bg-color;
+        }
+        &:hover {
+            background-color: $color-red;
+            transform: scale(0.95);
+            svg {
+                //fill: $text-primary;
+            }
+            background-image: linear-gradient(45deg, rgba(var(--bg-box), 0) 0, $color-red);
+        }
+    }
+    
+}
+.modal-content {
+    padding: 40px;
+}
+
+a {
+    font-size: $text-size;
+    font-family: $font-default, sans-serif;
+    font-weight: 300;
+    color: $text-primary;
+}
+
+small {
+    font-size: $text-small-size; //15px
+    color: $line-color; //color: rgb(145, 156, 176);
+}
+
+ul {
+    li {
+        line-height: 1.15rem;
+    }
+}
+
+section {
+    overflow: hidden;
+    width: 100%;
+}
+section.inverse {
+    h1, h2, h3, h4, h5, p {
+        color: $text-color-primary-i;
+    }
+    a:not(.btn) {
+        color: $bg-primary;
+    }
+}
+
+
+// classes
+
+.shine {
+    background-image: linear-gradient(270deg, rgba(100, 181, 239, 0) 48.44%, rgba(255,255,255,.3) 75.52%, rgba(100, 181, 239, 0) 100%);
+    background-repeat: no-repeat;
+    animation: bg-move linear 4s infinite;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 8px 15px;
+    //font-size: 14px;
+    //font-size: $text-size;
+    font-size: 17px;
+    font-family: $font-default;
+    font-weight: 500;
+    //@at-root: 700;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    //background-color: $text-secondary;
+    color: #fff; //$bg-color
+    //box-shadow: 0px 0px 10px rgba(var(--bg-color), 0.8);
+    transition: 0.1s;
+
+    &>div {
+        display: flex;
+        align-items: center
+    }
+
+    svg {
+        fill: $bg-color;
+        max-width: 15px;
+        max-height: 15px;
+        margin-left: 15px;
+    }
+
+    &:hover {
+        //background-color: $line-color;
+        color: $bg-color;
+    }
+    &.btn-big {
+        padding: 18px 40px;
+        border-radius: 8px;
+    }
+    &.btn-middle {
+        padding: 12px 20px;
+        border-radius: 8px;
+    }
+}
+
+.btn-full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 18px;
+}
+
+.btn-primary {
+    background-color: $bg-primary;
+    color: $text-color-btn;
+
+    svg {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+
+    &:hover {
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.btn-white {
+    background-color: $text-primary;
+    color: $bg-color;
+}
+
+.btn-default {
+    background-color: $line-color;
+    color: $bg-color;
+
+    svg {
+        fill: rgba(var(--bg-color), 0.65);
+    }
+
+    &:hover {
+        background-color: $bg-primary;
+        color: $text-color-btn;
+
+        svg {
+            fill: $text-primary;
+        }
+    }
+}
+
+.btn-danger {
+    background-color: rgb(189, 23, 23);
+
+    svg {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+
+    &:hover {
+        background-color: rgb(175, 23, 23);
+
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.btn-success {
+    box-shadow: 0px 0px 10px rgba(15, 253, 27, 0.3);
+    background-color: rgb(29, 180, 54);
+
+    svg {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+
+    &:hover {
+        background-color: rgb(31, 173, 54);
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    &.btn-inverse {
+        background-color: $line-color;
+        color: $bg-color;
+
+        &:hover {
+            color: $text-primary;
+            background-color: rgb(29, 180, 54);
+        }
+    }
+}
+
+.btn:disabled,
+.btn[disabled] {
+    cursor: default;
+    background-color: rgba(var(--text-secondary), 0.2);
+    color: $bg-color; //$line-color
+
+    svg {
+        fill: $bg-color; //$line-color
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+}
+
+.btn-gradient {
+    padding: 18px 50px;
+    //font-size: 17px;
+    //font-weight: 300;
+    border: none;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: $bg-primary;
+    color: $text-color-btn;
+
+    background: linear-gradient(
+        45deg,
+        #fa7e1e,
+        #cb1576 30%,
+        #7b1bc0 70%,
+        #3957d5 100%
+    );
+    //border: 2px solid #fff;
+    box-shadow: 0px 0px 50px 20px rgba(0,0,0,0.8);
+    //box-shadow: inset 1px 2px 5px 1px rgba(0,0,0,0.5);
+    svg {
+        max-width: 42px;
+        max-height: 42px;
+        fill: #fff;
+        margin-left: 20px;
+        margin-right: -10px;
+    }
+
+    transition: 0.65s;
+    //border: 2px dashed #fff;
+    color: #fff !important;
+    cursor: pointer;
+    &:hover {
+        transform: translateY(1px);
+        //border: 2px solid transparent;
+        //background: $bg-primary;
+        // inset 1px 2px 5px 1px rgba(0,0,0,0.5),
+        box-shadow:  0px 20px 50px 0px rgba(203, 21, 118, 0.8), 0px -20px 50px 0px rgba(123, 27, 192, 0.8), 20px 0px 50px 0px rgba(250, 126, 30, 0.8), -20px 0px 30px 0px rgba(57, 101, 213, 0.9);
+    }
+}
+
+
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    //background: transparent;
+    background-color: $bg-primary;
+    /*&:before {
+        content: '';
+        width: 115%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-color: $bg-primary;
+        top: 0;
+        right: 0;
+        transition: 0.15s width;
+    }*/
+    &:after {
+        content: '';
+        width: 0;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-color: $bg-primary2;
+        top: 0;
+        left: -10%;
+        transition: 0.15s width;
+        transform: skew(30deg, 0);
+    }
+    &:hover {
+        color: $text-color-btn;
+        &:before {
+            width: 0;
+        }
+        &:after {
+            width: 120%;
+        }
+    }
+}
+
+.overlay {
+	width: 100%;
+	min-height: 100vh;
+    height: 100%;
+	//background-color: rgba(22, 25, 36, 0.5); // #0d1117;
+	background: linear-gradient(
+		30deg,
+		rgba(22, 25, 36, 0.9),
+		rgba(22, 25, 36, 0)
+	);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}

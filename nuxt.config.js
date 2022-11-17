@@ -1,6 +1,6 @@
 export default {
 	server: {
-		host: '0', // default: localhost
+		host: 'localhost', // default: localhost
 		port: process.env.PORT || 3000
 	},
 	ssr: false,
